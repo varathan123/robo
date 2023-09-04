@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+
+  .robot {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    animation: dance 2s infinite;..
+  }
+
+  .head {
+    width: 100px;
+    height: 100px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50px;
+  }
+
+  .body {
+    width: 100px;
+    height: 150px;
+    background-color: #3498db;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+  }
+
+  .arm, .leg {
+    width: 30px;
+    height: 100px;
+    background-color: #2ecc71;
+    position: absolute;
+  }
+
+  .arm.left {
+    top: 100px;
+    left: -10px;
+  }
+
+  .arm.right {
+    top: 100px;
+    left: 170px;
+  }
+
+  .leg.left {
+    top: 250px;
+    left: 80px;
+  }
+
+  .leg.right {
+    top: 250px;
+    left: 80px;
+  }
+
+  @keyframes dance {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(30deg);
+    }
+  }
+</style>
+<title>Dancing Robot</title>
+</head>
+<body>
+  <div class="robot">
+    <div class="head"></div>
+    <div class="body"></div>
+    <div class="arm left"></div>
+    <div class="arm right"></div>
+    <div class="leg left"></div>
+    <div class="leg right"></div>
+  </div>
+</body>
+</html>
